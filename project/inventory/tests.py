@@ -17,8 +17,9 @@ class ListProductsEndpointTests(TestCase):
             {
                 "name": p.name,
                 "description": p.description,
+                "category": p.category,
                 "code": p.code,
-                "available_quantity": p.available_quantity
+                "available_quantity": p.available_quantity,
             } for p in products
         ]
 
@@ -34,6 +35,7 @@ class ProductDetailEndpointTests(TestCase):
         expected_content = {
             "name": product.name,
             "description": product.description,
+            "category": product.category,
             "code": product.code,
             "available_quantity": product.available_quantity
         }
